@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Rounded Orange Background -->
+  <rect x="0" y="0" width="100" height="100" rx="25" fill="#FF6B35" />
+
+  <!-- Blue Book (Bottom-most layer) -->
+  <g transform="translate(48, 44)">
+    <rect x="0" y="0" width="32" height="36" rx="1" fill="#48B6F9" />
+    <rect x="0" y="36" width="32" height="3" fill="#E8F4FD" />
+    <rect x="0" y="39" width="32" height="3" rx="1" fill="#2C8AC4" />
+  </g>
+
+  <!-- Pink Book (Middle layer) -->
+  <g transform="translate(37, 33)">
+    <rect x="0" y="0" width="32" height="36" rx="1" fill="#E2336B" />
+    <rect x="0" y="36" width="32" height="3" fill="#FCE9EF" />
+    <rect x="0" y="39" width="32" height="3" rx="1" fill="#A81C49" />
+  </g>
+
+  <!-- Green Book (Top-most layer) -->
+  <g transform="translate(26, 22)">
+    <rect x="0" y="0" width="32" height="36" rx="1" fill="#88E158" />
+    <rect x="0" y="36" width="32" height="3" fill="#EBF7E5" />
+    <rect x="0" y="39" width="32" height="3" rx="1" fill="#4B9B27" />
+  </g>
+</svg>
