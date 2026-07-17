@@ -73,3 +73,6 @@ export { worldGKData } from './world-gk-full';
 
 // History GK
 export { historyGKData } from './history-gk-full';
+
+// General Awareness GK
+export { generalAwarenessGKData } from './general-awareness-full';
