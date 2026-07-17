@@ -3,7 +3,7 @@ import './globals.css';
 const ADSENSE_CLIENT = 'ca-pub-6815277662449747';
 
 export const metadata = {
-  metadataBase: new URL('https://gkhindipro.in'),
+  metadataBase: new URL('https://gk.moneycal.in'),
   title: {
     default: 'GK Hindi Pro - GK Questions In Hindi 2025 | सामान्य ज्ञान',
     template: '%s | GK Hindi Pro - सामान्य ज्ञान'
@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'hi_IN',
-    url: 'https://gkhindipro.in',
+    url: 'https://gk.moneycal.in',
     siteName: 'GK Hindi Pro',
     title: 'GK Hindi Pro - GK Questions In Hindi 2025 | सामान्य ज्ञान',
     description: 'Best GK in Hindi website with 20,000+ questions for SSC, UPSC, Banking, Railway. Free quiz & current affairs 2025.',
@@ -34,7 +34,7 @@ export const metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  alternates: { canonical: 'https://gkhindipro.in' },
+  alternates: { canonical: 'https://gk.moneycal.in' },
 };
 
 export default function RootLayout({ children }) {
@@ -42,11 +42,11 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'GK Hindi Pro',
-    url: 'https://gkhindipro.in',
+    url: 'https://gk.moneycal.in',
     description: 'Best GK in Hindi - 20,000+ General Knowledge Questions',
     potentialAction: {
       '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: 'https://gkhindipro.in/search?q={search_term_string}' },
+      target: { '@type': 'EntryPoint', urlTemplate: 'https://gk.moneycal.in/search?q={search_term_string}' },
       'query-input': 'required name=search_term_string',
     },
   };

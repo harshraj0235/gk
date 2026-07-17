@@ -3,7 +3,7 @@ import { categories } from '../../data/categories';
 export const metadata = {
   title: 'GK Quiz In Hindi - Online GK Test 2025 | Free Quiz',
   description: 'Free Online GK Quiz in Hindi. Practice 50+ categories with timer-based interactive quiz for SSC, UPSC, Banking, Railway exams.',
-  alternates: { canonical: 'https://gkhindipro.in/quiz' },
+  alternates: { canonical: 'https://gk.moneycal.in/quiz' },
 };
 
 export default function QuizIndexPage() {

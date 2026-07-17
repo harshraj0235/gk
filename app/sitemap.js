@@ -1,7 +1,7 @@
 import { categories } from '../data/categories';
 
 export default function sitemap() {
-  const baseUrl = 'https://gkhindipro.in';
+  const baseUrl = 'https://gk.moneycal.in';
   const now = new Date();
 
   const staticPages = [

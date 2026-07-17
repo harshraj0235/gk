@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Privacy Policy | GK Hindi Pro',
   description: 'Privacy Policy for GK Hindi Pro - How we collect, use, and protect your information.',
-  alternates: { canonical: 'https://gkhindipro.in/privacy-policy' },
+  alternates: { canonical: 'https://gk.moneycal.in/privacy-policy' },
 };
 
 export default function PrivacyPage() {

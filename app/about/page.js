@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'About Us | GK Hindi Pro - सामान्य ज्ञान',
   description: 'About GK Hindi Pro - India\'s best Hindi GK website with 20,000+ questions for SSC, UPSC, Banking, Railway exams.',
-  alternates: { canonical: 'https://gkhindipro.in/about' },
+  alternates: { canonical: 'https://gk.moneycal.in/about' },
 };
 
 export default function AboutPage() {

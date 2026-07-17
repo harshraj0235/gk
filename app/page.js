@@ -9,7 +9,7 @@ export const metadata = {
   title: 'GK In Hindi - GK Questions In Hindi 2025-2026 | सामान्य ज्ञान',
   description: 'यह वेबसाइट सामान्य ज्ञान को बढ़ाने का प्रयास है। SSC, IBPS, UPSC, RBI, CTET, TET, BED के लिए 20,000+ GK प्रश्न हिंदी में।',
   keywords: 'GK in Hindi, GK Questions In Hindi, सामान्य ज्ञान, Current Affairs 2025, SSC GK, UPSC GK, Hindi GK',
-  alternates: { canonical: 'https://gkhindipro.in' },
+  alternates: { canonical: 'https://gk.moneycal.in' },
   openGraph: {
     title: 'GK Hindi Pro - Best GK Questions In Hindi 2025',
     description: '20,000+ GK Questions in Hindi for SSC, UPSC, Banking, Railway. Free online quiz & current affairs.',

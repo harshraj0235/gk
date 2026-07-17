@@ -7,7 +7,7 @@ export default function robots() {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://gkhindipro.in/sitemap.xml',
-    host: 'https://gkhindipro.in',
+    sitemap: 'https://gk.moneycal.in/sitemap.xml',
+    host: 'https://gk.moneycal.in',
   };
 }
