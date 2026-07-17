@@ -63,7 +63,7 @@ export const historyGKData = {
     { id: 54, question: 'अकबरनामा और आइन-ए-अकबरी की रचना किसने की थी?', answer: 'अबुल फजल', type: 'oneliner' },
     { id: 55, question: 'किस मुग़ल शासक के काल को चित्रकला का स्वर्ण युग कहा जाता है?', answer: 'जहाँगीर', type: 'oneliner' },
     { id: 56, question: 'ताजमहल (आगरा) का निर्माण किसने करवाया था?', answer: 'शाहजहाँ', type: 'oneliner' },
-    { id: 57, question: 'किस मुग़ल शासक को 'ज़िंदा पीर' कहा जाता था?', answer: 'औरंगज़ेब', type: 'oneliner' },
+    { id: 57, question: "किस मुग़ल शासक को 'ज़िंदा पीर' कहा जाता था?", answer: 'औरंगज़ेब', type: 'oneliner' },
     { id: 58, question: 'सिख धर्म के संस्थापक कौन थे?', answer: 'गुरु नानक देव जी', type: 'oneliner' },
     { id: 59, question: 'खालसा पंथ की स्थापना किसने की थी?', answer: 'गुरु गोबिंद सिंह जी (1699 ई. में)', type: 'oneliner' },
     { id: 60, question: 'स्वर्ण मंदिर (अमृतसर) की नींव किसने रखी थी?', answer: 'सूफी संत मियां मीर ने (गुरु अर्जुन देव के समय)', type: 'oneliner' },
