@@ -4,24 +4,50 @@ import { useState, useEffect, useCallback } from 'react';
 import { categories, getCategoryBySlug } from '../../../data/categories';
 import { indiaGKData } from '../../../data/india-gk';
 import { scienceGKData, historyGKData } from '../../../data/general-gk';
+import { computerGKData, geographyGKData, sportsGKData, economicsGKData, polityGKData } from '../../../data/subject-gk';
+import { sscGKData, upscGKData, bankGKData, railGKData, biharGKData, armyGKData } from '../../../data/exam-gk';
+import { rajasthanGKData, upGKData, mpGKData, hindiGrammarGKData, reasoningGKData, mathGKData, oneLineGKData } from '../../../data/more-gk';
 
 const QUIZ_TIME = 30; // seconds per question
 
+const dataMap = {
+  'india-gk': indiaGKData,
+  'science-gk': scienceGKData,
+  'history-gk': historyGKData,
+  'computer-gk': computerGKData,
+  'geography-gk': geographyGKData,
+  'sports-gk': sportsGKData,
+  'economics-gk': economicsGKData,
+  'political-gk': polityGKData,
+  'indian-polity-gk': polityGKData,
+  'ssc-gk': sscGKData,
+  'upsc-gk': upscGKData,
+  'bank-gk': bankGKData,
+  'rail-gk': railGKData,
+  'bihar-gk': biharGKData,
+  'indian-army-gk': armyGKData,
+  'rajasthan-gk': rajasthanGKData,
+  'up-gk': upGKData,
+  'mp-gk': mpGKData,
+  'hindi-grammar-gk': hindiGrammarGKData,
+  'reasoning': reasoningGKData,
+  'math-gk': mathGKData,
+  'one-line-gk': oneLineGKData,
+};
+
 function getCategoryQuestions(slug) {
-  switch (slug) {
-    case 'india-gk': return indiaGKData.questions.filter(q => q.type === 'mcq');
-    case 'science-gk': return scienceGKData.questions.filter(q => q.type === 'mcq');
-    case 'history-gk': return historyGKData.questions.filter(q => q.type === 'mcq');
-    default: {
-      // fallback generic questions
-      const cat = getCategoryBySlug(slug);
-      return [
-        { id: 1, question: `${cat?.title || slug} - Question 1: What is General Knowledge?`, options: ['GK is fun', 'GK is knowledge', 'GK is study', 'All of above'], answer: 3, type: 'mcq' },
-        { id: 2, question: `${cat?.title || slug} - Question 2: How to prepare for exams?`, options: ['Read daily', 'Practice MCQ', 'Watch videos', 'All of above'], answer: 3, type: 'mcq' },
-        { id: 3, question: `${cat?.title || slug} - Question 3: Best way to remember GK?`, options: ['Flashcards', 'Repetition', 'Notes', 'All methods work'], answer: 3, type: 'mcq' },
-      ];
-    }
+  const data = dataMap[slug];
+  if (data?.questions) {
+    const mcqs = data.questions.filter(q => q.type === 'mcq');
+    if (mcqs.length > 0) return mcqs;
   }
+  // fallback
+  const cat = getCategoryBySlug(slug);
+  return [
+    { id: 1, question: `${cat?.title || slug} - प्रश्न 1: सामान्य ज्ञान क्या है?`, options: ['ज्ञान', 'विज्ञान', 'पढ़ाई', 'उपरोक्त सभी'], answer: 3, type: 'mcq' },
+    { id: 2, question: `${cat?.title || slug} - प्रश्न 2: परीक्षा की तैयारी कैसे करें?`, options: ['रोज पढ़ें', 'MCQ अभ्यास', 'वीडियो देखें', 'उपरोक्त सभी'], answer: 3, type: 'mcq' },
+    { id: 3, question: `${cat?.title || slug} - प्रश्न 3: GK याद करने का सबसे अच्छा तरीका?`, options: ['फ्लैशकार्ड', 'दोहराव', 'नोट्स', 'सभी तरीके काम करते हैं'], answer: 3, type: 'mcq' },
+  ];
 }
 
 export default function QuizPage({ params }) {

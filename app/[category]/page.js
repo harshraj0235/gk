@@ -2,6 +2,9 @@ import { categories, getCategoryBySlug } from '../../data/categories';
 import { indiaGKData } from '../../data/india-gk';
 import { scienceGKData, historyGKData } from '../../data/general-gk';
 import { currentAffairsData } from '../../data/current-affairs';
+import { computerGKData, geographyGKData, sportsGKData, economicsGKData, polityGKData } from '../../data/subject-gk';
+import { sscGKData, upscGKData, bankGKData, railGKData, biharGKData, armyGKData } from '../../data/exam-gk';
+import { rajasthanGKData, upGKData, mpGKData, hindiGrammarGKData, reasoningGKData, mathGKData, oneLineGKData } from '../../data/more-gk';
 import { notFound } from 'next/navigation';
 
 const ADSENSE_CLIENT = 'ca-pub-6815277662449747';
@@ -38,6 +41,24 @@ function getCategoryData(slug) {
     case 'science-gk': return scienceGKData;
     case 'history-gk': return historyGKData;
     case 'current-affairs': return currentAffairsData;
+    case 'computer-gk': return computerGKData;
+    case 'geography-gk': return geographyGKData;
+    case 'sports-gk': return sportsGKData;
+    case 'economics-gk': return economicsGKData;
+    case 'political-gk': case 'indian-polity-gk': return polityGKData;
+    case 'ssc-gk': return sscGKData;
+    case 'upsc-gk': return upscGKData;
+    case 'bank-gk': return bankGKData;
+    case 'rail-gk': return railGKData;
+    case 'bihar-gk': return biharGKData;
+    case 'indian-army-gk': return armyGKData;
+    case 'rajasthan-gk': return rajasthanGKData;
+    case 'up-gk': return upGKData;
+    case 'mp-gk': return mpGKData;
+    case 'hindi-grammar-gk': return hindiGrammarGKData;
+    case 'reasoning': return reasoningGKData;
+    case 'math-gk': return mathGKData;
+    case 'one-line-gk': return oneLineGKData;
     default: return null;
   }
 }
