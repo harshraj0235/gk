@@ -91,19 +91,4 @@ export const scienceGKData = {
 };
 
 // History GK
-export const historyGKData = {
-  slug: 'history-gk',
-  title: 'History GK In Hindi - इतिहास सामान्य ज्ञान',
-  description: 'History GK Questions in Hindi - Indian History and World History for competitive exams',
-  keywords: 'History GK Hindi, Itihas GK, Indian History GK, History Questions Hindi',
-  questions: [
-    { id: 1, question: 'भारत का प्रथम गवर्नर जनरल कौन था ?', options: ['लॉर्ड डलहौजी', 'लॉर्ड कैनिंग', 'वारेन हेस्टिंग्स', 'लॉर्ड कर्जन'], answer: 2, type: 'mcq' },
-    { id: 2, question: 'मुग़ल वंश की स्थापना किसने की थी ?', options: ['अकबर', 'बाबर', 'हुमायूँ', 'औरंगज़ेब'], answer: 1, type: 'mcq' },
-    { id: 3, question: 'पानीपत की पहली लड़ाई कब हुई थी ?', options: ['1526', '1556', '1761', '1600'], answer: 0, type: 'mcq' },
-    { id: 4, question: 'भारतीय राष्ट्रीय कांग्रेस की स्थापना कब हुई?', options: ['1883', '1885', '1887', '1890'], answer: 1, type: 'mcq' },
-    { id: 5, question: 'गांधीजी ने दांडी मार्च कब शुरू किया था?', options: ['1920', '1930', '1942', '1947'], answer: 1, type: 'mcq' },
-    { id: 6, question: 'मौर्या साम्राज्य के संस्थापक कौन थे ?', options: ['चन्द्रगुप्त मौर्य', 'सम्राट अशोक', 'बिन्दुसार', 'महापद्म नंद'], answer: 0, type: 'mcq' },
-    { id: 7, question: 'हड़प्पा सभ्यता की खोज कब हुई?', options: ['1900', '1921', '1947', '1960'], answer: 1, type: 'mcq' },
-    { id: 8, question: 'सिकंदर ने भारत पर आक्रमण कब किया?', options: ['326 BC', '232 BC', '500 BC', '200 BC'], answer: 0, type: 'mcq' },
-  ]
-};
+export { historyGKData } from './history-gk-full';
