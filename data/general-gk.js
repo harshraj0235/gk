@@ -66,29 +66,10 @@ export const generalGKData = {
 };
 
 // Science GK
-export const scienceGKData = {
-  slug: 'science-gk',
-  title: 'Science GK In Hindi - विज्ञान सामान्य ज्ञान',
-  description: 'Science GK Questions in Hindi for SSC, UPSC, Railway and all competitive exams',
-  keywords: 'Science GK in Hindi, Vigyan GK, Science Question Answer Hindi',
-  questions: [
-    { id: 1, question: 'प्रकाश की गति कितनी है ?', options: ['3×10⁸ m/s', '3×10⁶ m/s', '3×10¹⁰ m/s', '3×10⁴ m/s'], answer: 0, type: 'mcq' },
-    { id: 2, question: 'DNA की फुल फॉर्म क्या है ?', options: ['Deoxyribonucleic Acid', 'Diribonucleic Acid', 'Deoxyribose Nucleic Acid', 'Direct Nucleic Acid'], answer: 0, type: 'mcq' },
-    { id: 3, question: 'मानव शरीर में कुल कितनी हड्डियाँ होती हैं ?', options: ['200', '206', '210', '212'], answer: 1, type: 'mcq' },
-    { id: 4, question: 'पृथ्वी का सबसे बड़ा महासागर कौन सा है ?', options: ['हिन्द महासागर', 'अटलांटिक महासागर', 'प्रशांत महासागर', 'आर्कटिक महासागर'], answer: 2, type: 'mcq' },
-    { id: 5, question: 'विटामिन C का रासायनिक नाम क्या है ?', options: ['Retinol', 'Ascorbic Acid', 'Calciferol', 'Tocopherol'], answer: 1, type: 'mcq' },
-    { id: 6, question: 'कौन सी गैस को हँसाने वाली गैस कहते हैं ?', options: ['नाइट्रोजन', 'नाइट्रस ऑक्साइड', 'कार्बन डाइऑक्साइड', 'ऑक्सीजन'], answer: 1, type: 'mcq' },
-    { id: 7, question: 'न्यूटन का गुरुत्वाकर्षण नियम किसने दिया ?', options: ['गैलिलियो', 'आइंस्टीन', 'आइजैक न्यूटन', 'केपलर'], answer: 2, type: 'mcq' },
-    { id: 8, question: 'मानव शरीर में रक्त का pH मान कितना होता है ?', options: ['6.4', '7.4', '8.4', '5.4'], answer: 1, type: 'mcq' },
-    { id: 9, question: 'सूर्य से पृथ्वी तक प्रकाश आने में कितना समय लगता है ?', options: ['5 मिनट', '8 मिनट 20 सेकंड', '10 मिनट', '12 मिनट'], answer: 1, type: 'mcq' },
-    { id: 10, question: 'परमाणु में नाभिक की खोज किसने की ?', options: ['J.J. Thomson', 'Ernest Rutherford', 'Niels Bohr', 'Max Planck'], answer: 1, type: 'mcq' },
-    { id: 11, question: 'पानी का रासायनिक सूत्र क्या है ?', answer: 'H₂O', type: 'oneliner' },
-    { id: 12, question: 'सबसे हल्की धातु कौन सी है ?', answer: 'लिथियम (Li)', type: 'oneliner' },
-    { id: 13, question: 'सबसे भारी धातु कौन सी है ?', answer: 'ओस्मियम (Os)', type: 'oneliner' },
-    { id: 14, question: 'ध्वनि की गति वायु में कितनी होती है?', answer: '343 m/s (0°C पर)', type: 'oneliner' },
-    { id: 15, question: 'मानव मस्तिष्क का वजन कितना होता है?', answer: 'लगभग 1.4 kg', type: 'oneliner' },
-  ]
-};
+export { scienceGKData } from './science-gk-full';
+
+// World GK
+export { worldGKData } from './world-gk-full';
 
 // History GK
 export { historyGKData } from './history-gk-full';

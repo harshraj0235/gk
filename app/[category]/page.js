@@ -1,6 +1,6 @@
 import { categories, getCategoryBySlug } from '../../data/categories';
 import { indiaGKData } from '../../data/india-gk';
-import { scienceGKData, historyGKData } from '../../data/general-gk';
+import { scienceGKData, historyGKData, worldGKData } from '../../data/general-gk';
 import { currentAffairsData } from '../../data/current-affairs';
 import { computerGKData, geographyGKData, sportsGKData, economicsGKData, polityGKData } from '../../data/subject-gk';
 import { sscGKData, upscGKData, bankGKData, railGKData, biharGKData, armyGKData } from '../../data/exam-gk';
@@ -40,6 +40,7 @@ function getCategoryData(slug) {
   switch (slug) {
     case 'india-gk': return indiaGKData;
     case 'science-gk': return scienceGKData;
+    case 'world-gk': return worldGKData;
     case 'history-gk': return historyGKData;
     case 'current-affairs': return currentAffairsData;
     case 'computer-gk': return computerGKData;

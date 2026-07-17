@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense } from 'react';
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 
 function MCQCard({ q, index }) {
   const labels = ['A', 'B', 'C', 'D'];
@@ -24,8 +25,12 @@ function MCQCard({ q, index }) {
   );
 }
 
-export default function PaginatedList({ items, type, itemsPerPage = 20 }) {
-  const [currentPage, setCurrentPage] = useState(1);
+function PaginatedContent({ items, type, itemsPerPage }) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+
+  const currentPage = Number(searchParams.get('page')) || 1;
   const totalPages = Math.ceil(items.length / itemsPerPage);
 
   if (!items || items.length === 0) return null;
@@ -34,8 +39,12 @@ export default function PaginatedList({ items, type, itemsPerPage = 20 }) {
   const currentItems = items.slice(startIndex, startIndex + itemsPerPage);
 
   const handlePageChange = (page) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 200, behavior: 'smooth' }); // scroll up slightly when changing page
+    const current = new URLSearchParams(Array.from(searchParams.entries()));
+    current.set('page', page);
+    const search = current.toString();
+    const query = search ? `?${search}` : '';
+    router.push(`${pathname}${query}`, { scroll: false });
+    window.scrollTo({ top: 200, behavior: 'smooth' });
   };
 
   return (
@@ -68,12 +77,12 @@ export default function PaginatedList({ items, type, itemsPerPage = 20 }) {
         }}>
           <button
             onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
+            disabled={currentPage <= 1}
             style={{
               padding: '8px 16px', borderRadius: '50px', border: '1px solid var(--border)',
-              background: currentPage === 1 ? 'transparent' : 'var(--bg-card)',
-              color: currentPage === 1 ? 'var(--text-dim)' : 'var(--text)',
-              cursor: currentPage === 1 ? 'not-allowed' : 'pointer'
+              background: currentPage <= 1 ? 'transparent' : 'var(--bg-card)',
+              color: currentPage <= 1 ? 'var(--text-dim)' : 'var(--text)',
+              cursor: currentPage <= 1 ? 'not-allowed' : 'pointer'
             }}
           >
             Prev
@@ -85,12 +94,12 @@ export default function PaginatedList({ items, type, itemsPerPage = 20 }) {
 
           <button
             onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
+            disabled={currentPage >= totalPages}
             style={{
               padding: '8px 16px', borderRadius: '50px', border: '1px solid var(--border)',
-              background: currentPage === totalPages ? 'transparent' : 'var(--bg-card)',
-              color: currentPage === totalPages ? 'var(--text-dim)' : 'var(--text)',
-              cursor: currentPage === totalPages ? 'not-allowed' : 'pointer'
+              background: currentPage >= totalPages ? 'transparent' : 'var(--bg-card)',
+              color: currentPage >= totalPages ? 'var(--text-dim)' : 'var(--text)',
+              cursor: currentPage >= totalPages ? 'not-allowed' : 'pointer'
             }}
           >
             Next
@@ -98,5 +107,13 @@ export default function PaginatedList({ items, type, itemsPerPage = 20 }) {
         </div>
       )}
     </div>
+  );
+}
+
+export default function PaginatedList({ items, type, itemsPerPage = 20 }) {
+  return (
+    <Suspense fallback={<div>Loading questions...</div>}>
+      <PaginatedContent items={items} type={type} itemsPerPage={itemsPerPage} />
+    </Suspense>
   );
 }
