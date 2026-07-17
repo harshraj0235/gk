@@ -81,52 +81,6 @@ export const geographyGKData = {
 // Sports GK
 export { sportsGKData } from './sports-gk-full';
 
-// Economics GK
-export const economicsGKData = {
-  slug: 'economics-gk',
-  title: 'Economics GK In Hindi - अर्थशास्त्र सामान्य ज्ञान',
-  description: 'Economics GK Questions in Hindi - भारतीय अर्थव्यवस्था से संबंधित 100+ प्रश्न',
-  keywords: 'Economics GK Hindi, अर्थशास्त्र GK, Indian Economy GK Hindi, Banking GK',
-  questions: [
-    { id: 1, question: 'भारतीय रिजर्व बैंक (RBI) की स्थापना कब हुई ?', options: ['1930', '1935', '1940', '1947'], answer: 1, type: 'mcq' },
-    { id: 2, question: 'भारत में GST कब लागू हुआ ?', options: ['1 जुलाई 2016', '1 जुलाई 2017', '1 अप्रैल 2017', '1 जनवरी 2018'], answer: 1, type: 'mcq' },
-    { id: 3, question: 'भारत की मुद्रा क्या है ?', options: ['डॉलर', 'यूरो', 'रुपया', 'पाउंड'], answer: 2, type: 'mcq' },
-    { id: 4, question: 'NITI आयोग की स्थापना कब हुई ?', options: ['2014', '2015', '2016', '2017'], answer: 1, type: 'mcq' },
-    { id: 5, question: 'GDP का पूरा नाम क्या है ?', options: ['Gross Domestic Product', 'Gross Direct Product', 'Grand Domestic Product', 'General Domestic Product'], answer: 0, type: 'mcq' },
-    { id: 6, question: 'भारत में योजना आयोग की स्थापना कब हुई ?', options: ['1947', '1950', '1952', '1955'], answer: 1, type: 'mcq' },
-    { id: 7, question: 'भारत का सबसे बड़ा बैंक कौन सा है ?', options: ['पंजाब नेशनल बैंक', 'बैंक ऑफ बड़ौदा', 'भारतीय स्टेट बैंक', 'केनरा बैंक'], answer: 2, type: 'mcq' },
-    { id: 8, question: 'RBI का मुख्यालय कहाँ है ?', options: ['दिल्ली', 'मुंबई', 'कोलकाता', 'चेन्नई'], answer: 1, type: 'mcq' },
-    { id: 9, question: 'भारत में पहली पंचवर्षीय योजना कब शुरू हुई?', answer: '1951', type: 'oneliner' },
-    { id: 10, question: 'SEBI का पूरा नाम क्या है?', answer: 'Securities and Exchange Board of India', type: 'oneliner' },
-    { id: 11, question: 'भारत की प्रति व्यक्ति आय कितनी है (2024)?', answer: 'लगभग ₹1,72,000 वार्षिक', type: 'oneliner' },
-    { id: 12, question: 'नोटबंदी कब हुई थी?', answer: '8 नवंबर 2016', type: 'oneliner' },
-    { id: 13, question: 'मुद्रास्फीति (Inflation) क्या है?', answer: 'वस्तुओं और सेवाओं की कीमतों में निरंतर वृद्धि', type: 'oneliner' },
-    { id: 14, question: 'भारत में बजट कौन पेश करता है?', answer: 'वित्त मंत्री', type: 'oneliner' },
-    { id: 15, question: 'UPI का पूरा नाम क्या है?', answer: 'Unified Payments Interface', type: 'oneliner' },
-  ]
-};
+export { economicsGKData } from './economics-gk-full';
 
-// Political Science / Polity GK
-export const polityGKData = {
-  slug: 'political-gk',
-  title: 'Indian Polity GK In Hindi - भारतीय राजनीति सामान्य ज्ञान',
-  description: 'Indian Polity GK Questions in Hindi - भारतीय संविधान, राजनीति, शासन व्यवस्था',
-  keywords: 'Indian Polity GK Hindi, Rajniti GK, Constitution GK Hindi, भारतीय संविधान GK',
-  questions: [
-    { id: 1, question: 'भारतीय संविधान कब लागू हुआ ?', options: ['15 अगस्त 1947', '26 जनवरी 1950', '26 नवंबर 1949', '2 अक्टूबर 1950'], answer: 1, type: 'mcq' },
-    { id: 2, question: 'संविधान सभा के अध्यक्ष कौन थे ?', options: ['जवाहरलाल नेहरू', 'डॉ राजेंद्र प्रसाद', 'डॉ भीमराव अंबेडकर', 'सरदार पटेल'], answer: 1, type: 'mcq' },
-    { id: 3, question: 'भारतीय संविधान के जनक किसे कहा जाता है ?', options: ['महात्मा गांधी', 'जवाहरलाल नेहरू', 'डॉ भीमराव अंबेडकर', 'सरदार पटेल'], answer: 2, type: 'mcq' },
-    { id: 4, question: 'भारत के वर्तमान राष्ट्रपति कौन हैं ?', options: ['राम नाथ कोविंद', 'प्रणब मुखर्जी', 'द्रौपदी मुर्मू', 'A.P.J. अब्दुल कलाम'], answer: 2, type: 'mcq' },
-    { id: 5, question: 'लोकसभा में अधिकतम कितने सदस्य हो सकते हैं ?', options: ['500', '545', '552', '600'], answer: 2, type: 'mcq' },
-    { id: 6, question: 'राज्यसभा में कुल कितने सदस्य होते हैं ?', options: ['230', '245', '250', '260'], answer: 2, type: 'mcq' },
-    { id: 7, question: 'भारतीय संविधान में कुल कितने अनुच्छेद हैं ?', options: ['395', '400', '448', '500'], answer: 2, type: 'mcq' },
-    { id: 8, question: 'मौलिक अधिकार संविधान के किस भाग में हैं ?', options: ['भाग II', 'भाग III', 'भाग IV', 'भाग V'], answer: 1, type: 'mcq' },
-    { id: 9, question: 'भारत के प्रथम मुख्य न्यायाधीश कौन थे?', answer: 'हीरालाल जे. कानिया', type: 'oneliner' },
-    { id: 10, question: 'भारतीय संविधान में कुल कितनी अनुसूचियाँ हैं?', answer: '12 अनुसूचियाँ', type: 'oneliner' },
-    { id: 11, question: 'मतदान की न्यूनतम आयु क्या है?', answer: '18 वर्ष', type: 'oneliner' },
-    { id: 12, question: 'राष्ट्रपति बनने की न्यूनतम आयु क्या है?', answer: '35 वर्ष', type: 'oneliner' },
-    { id: 13, question: 'भारत का सर्वोच्च न्यायालय कहाँ है?', answer: 'नई दिल्ली', type: 'oneliner' },
-    { id: 14, question: '73वाँ संविधान संशोधन किससे संबंधित है?', answer: 'पंचायती राज', type: 'oneliner' },
-    { id: 15, question: 'भारतीय संविधान की प्रस्तावना में कितनी बार संशोधन हुआ है?', answer: '1 बार (42वाँ संशोधन, 1976)', type: 'oneliner' },
-  ]
-};
+export { polityGKData } from './political-gk-full';
