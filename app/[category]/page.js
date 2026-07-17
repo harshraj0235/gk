@@ -6,6 +6,7 @@ import { computerGKData, geographyGKData, sportsGKData, economicsGKData, polityG
 import { sscGKData, upscGKData, bankGKData, railGKData, biharGKData, armyGKData } from '../../data/exam-gk';
 import { rajasthanGKData, upGKData, mpGKData, hindiGrammarGKData, reasoningGKData, mathGKData, oneLineGKData } from '../../data/more-gk';
 import { notFound } from 'next/navigation';
+import PaginatedList from '../components/PaginatedList';
 
 const ADSENSE_CLIENT = 'ca-pub-6815277662449747';
 const ADSENSE_SLOT_ATF = '2683916778';
@@ -157,11 +158,7 @@ export default async function CategoryPage({ params }) {
                 <h2 id="mcq-heading" className="section-title">
                   📝 {cat.title} MCQ Questions | बहुविकल्पीय प्रश्न
                 </h2>
-                <div className="question-wrapper">
-                  {mcqQuestions.map((q, i) => (
-                    <MCQCard key={q.id} q={q} index={i} />
-                  ))}
-                </div>
+                <PaginatedList items={mcqQuestions} type="mcq" itemsPerPage={20} />
               </section>
             )}
 
@@ -180,15 +177,7 @@ export default async function CategoryPage({ params }) {
                 <h2 id="oneliner-heading" className="section-title">
                   ⚡ {cat.title} One Liners | एक लाइन प्रश्न
                 </h2>
-                <div className="oneliner-list">
-                  {oneliners.map((q, i) => (
-                    <div key={q.id} className="oneliner-item">
-                      <span className="oneliner-num">{i + 1}.</span>
-                      <span className="oneliner-q">{q.question}</span>
-                      <span className="oneliner-a">✅ {q.answer}</span>
-                    </div>
-                  ))}
-                </div>
+                <PaginatedList items={oneliners} type="oneliner" itemsPerPage={50} />
               </section>
             )}
 

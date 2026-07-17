@@ -79,34 +79,7 @@ export const geographyGKData = {
 };
 
 // Sports GK
-export const sportsGKData = {
-  slug: 'sports-gk',
-  title: 'Sports GK In Hindi - खेल सामान्य ज्ञान',
-  description: 'Sports GK Questions in Hindi - Cricket, Football, Olympics, Hockey GK for competitive exams',
-  keywords: 'Sports GK Hindi, Khel GK, Cricket GK Hindi, Olympics GK, खेल सामान्य ज्ञान',
-  questions: [
-    { id: 1, question: 'क्रिकेट विश्व कप 2023 का विजेता कौन है ?', options: ['भारत', 'ऑस्ट्रेलिया', 'इंग्लैंड', 'न्यूजीलैंड'], answer: 1, type: 'mcq' },
-    { id: 2, question: 'ओलंपिक खेल कितने वर्षों में एक बार होते हैं ?', options: ['2 वर्ष', '3 वर्ष', '4 वर्ष', '5 वर्ष'], answer: 2, type: 'mcq' },
-    { id: 3, question: 'फुटबॉल के खेल में एक टीम में कितने खिलाड़ी होते हैं ?', options: ['9', '10', '11', '12'], answer: 2, type: 'mcq' },
-    { id: 4, question: 'भारत का राष्ट्रीय खेल कौन सा है ?', options: ['क्रिकेट', 'हॉकी', 'कबड्डी', 'कोई आधिकारिक नहीं'], answer: 1, type: 'mcq' },
-    { id: 5, question: 'IPL की शुरुआत किस वर्ष हुई थी ?', options: ['2007', '2008', '2009', '2010'], answer: 1, type: 'mcq' },
-    { id: 6, question: 'FIFA विश्व कप 2022 किस देश ने जीता ?', options: ['ब्राज़ील', 'फ्रांस', 'अर्जेंटीना', 'जर्मनी'], answer: 2, type: 'mcq' },
-    { id: 7, question: 'अर्जुन पुरस्कार किस क्षेत्र में दिया जाता है ?', options: ['सिनेमा', 'साहित्य', 'खेल', 'विज्ञान'], answer: 2, type: 'mcq' },
-    { id: 8, question: 'राजीव गांधी खेल रत्न पुरस्कार का नया नाम क्या है ?', options: ['द्रोणाचार्य पुरस्कार', 'मेजर ध्यानचंद खेल रत्न', 'अर्जुन पुरस्कार', 'पद्म श्री'], answer: 1, type: 'mcq' },
-    { id: 9, question: 'विंबलडन किस खेल से संबंधित है ?', options: ['बैडमिंटन', 'टेनिस', 'गोल्फ', 'क्रिकेट'], answer: 1, type: 'mcq' },
-    { id: 10, question: 'सचिन तेंदुलकर ने अंतरराष्ट्रीय क्रिकेट में कुल कितने शतक बनाए ?', options: ['90', '100', '110', '120'], answer: 1, type: 'mcq' },
-    { id: 11, question: 'नीरज चोपड़ा ने किस खेल में ओलंपिक स्वर्ण पदक जीता?', answer: 'भाला फेंक (Javelin Throw) - टोक्यो 2020', type: 'oneliner' },
-    { id: 12, question: 'भारत ने पहला क्रिकेट विश्व कप कब जीता?', answer: '1983', type: 'oneliner' },
-    { id: 13, question: 'ओलंपिक में भारत ने पहला स्वर्ण पदक कब जीता?', answer: '1928 (हॉकी)', type: 'oneliner' },
-    { id: 14, question: 'IPL 2024 का विजेता कौन है?', answer: 'कोलकाता नाइट राइडर्स', type: 'oneliner' },
-    { id: 15, question: 'हॉकी के जादूगर किसे कहते हैं?', answer: 'मेजर ध्यानचंद', type: 'oneliner' },
-    { id: 16, question: 'टी-20 विश्व कप 2024 किसने जीता?', answer: 'भारत', type: 'oneliner' },
-    { id: 17, question: 'क्रिकेट पिच की लंबाई कितनी होती है?', answer: '22 गज (20.12 मीटर)', type: 'oneliner' },
-    { id: 18, question: 'पेरिस ओलंपिक 2024 में भारत ने कुल कितने पदक जीते?', answer: '6 पदक', type: 'oneliner' },
-    { id: 19, question: 'फ्लाइंग सिख किसे कहते हैं?', answer: 'मिल्खा सिंह', type: 'oneliner' },
-    { id: 20, question: 'विराट कोहली ने कितने ODI शतक बनाए हैं?', answer: '50 शतक', type: 'oneliner' },
-  ]
-};
+export { sportsGKData } from './sports-gk-full';
 
 // Economics GK
 export const economicsGKData = {
