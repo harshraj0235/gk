@@ -1,5 +1,7 @@
 import { categories } from '../data/categories';
 
+export const dynamic = 'force-static';
+
 export default function sitemap() {
   const baseUrl = 'https://gk.moneycal.in';
   const now = new Date();
