@@ -56,12 +56,6 @@ export default function HomePage() {
               SSC, UPSC, Banking, Railway, CTET और सभी प्रतियोगी परीक्षाओं के लिए
               <strong style={{ color: 'var(--accent)' }}> 20,000+</strong> प्रश्न हिंदी में
             </p>
-            <div className="hero-stats">
-              <div className="hero-stat"><span className="num">20,000+</span><span className="label">GK Questions</span></div>
-              <div className="hero-stat"><span className="num">50+</span><span className="label">Categories</span></div>
-              <div className="hero-stat"><span className="num">2026</span><span className="label">Current Affairs</span></div>
-              <div className="hero-stat"><span className="num">Free</span><span className="label">Online Quiz</span></div>
-            </div>
           </div>
         </div>
       </section>

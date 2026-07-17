@@ -1,12 +1,14 @@
+import { Suspense } from 'react';
+import SearchClient from './SearchClient';
+
 export const metadata = {
   title: 'Search GK Questions | GK Hindi Pro',
   description: 'Search 20,000+ GK Questions in Hindi. Find answers to any general knowledge question.',
   robots: { index: false },
 };
 
-export default function SearchPage({ searchParams }) {
-  const query = searchParams?.q || '';
-
+// We create a wrapper for the search input to pre-populate it if possible, but since it's static we just rely on client-side state
+export default function SearchPage() {
   return (
     <div className="container" style={{ padding: '40px 20px', minHeight: '60vh' }}>
       <nav className="breadcrumb">
@@ -15,7 +17,7 @@ export default function SearchPage({ searchParams }) {
       </nav>
 
       <h1 style={{ marginBottom: '24px' }}>
-        🔍 GK Search {query && <span style={{ color: 'var(--primary)' }}>: "{query}"</span>}
+        🔍 GK Search
       </h1>
 
       <form action="/search" method="GET" style={{ marginBottom: '32px' }}>
@@ -31,7 +33,6 @@ export default function SearchPage({ searchParams }) {
           <input
             type="search"
             name="q"
-            defaultValue={query}
             placeholder="GK खोजें... (Search any GK question)"
             autoFocus
             style={{
@@ -50,47 +51,31 @@ export default function SearchPage({ searchParams }) {
         </div>
       </form>
 
-      {!query && (
-        <div>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '24px' }}>
-            Popular searches:
-          </p>
-          <div className="tag-list">
-            {['भारत के राष्ट्रपति', 'Current Affairs 2025', 'Science GK', 'History GK', 'SSC GK', 'India GK', 'Computer GK', 'Sports GK'].map(tag => (
-              <a key={tag} href={`/search?q=${encodeURIComponent(tag)}`} className="tag">{tag}</a>
-            ))}
-          </div>
-        </div>
-      )}
+      <Suspense fallback={<div style={{ color: 'var(--text-muted)' }}>Loading search results...</div>}>
+        <SearchClient />
+      </Suspense>
 
-      {query && (
-        <div>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '16px', fontSize: '0.9rem' }}>
-            Showing results for &quot;{query}&quot; — Please browse our categories for more GK:
-          </p>
-          <div className="info-box">
-            <strong>💡 Tip:</strong> Use our category pages for best results. We have 50+ categories covering all competitive exam topics in Hindi.
-          </div>
-
-          {/* Show related categories */}
-          <div className="categories-grid" style={{ marginTop: '24px' }}>
-            {[
-              { slug: 'india-gk', title: 'India GK', titleHindi: 'भारत सामान्य ज्ञान', icon: '🇮🇳' },
-              { slug: 'current-affairs', title: 'Current Affairs', titleHindi: 'करेंट अफेयर्स', icon: '📰' },
-              { slug: 'science-gk', title: 'Science GK', titleHindi: 'विज्ञान GK', icon: '🔬' },
-              { slug: 'history-gk', title: 'History GK', titleHindi: 'इतिहास GK', icon: '🏛️' },
-              { slug: 'ssc-gk', title: 'SSC GK', titleHindi: 'SSC GK', icon: '📝' },
-              { slug: 'upsc-gk', title: 'UPSC GK', titleHindi: 'UPSC GK', icon: '🎓' },
-            ].map(cat => (
-              <a key={cat.slug} href={`/${cat.slug}`} className="category-card">
-                <span className="category-icon">{cat.icon}</span>
-                <span className="category-title">{cat.title}</span>
-                <span className="category-title-hindi">{cat.titleHindi}</span>
-              </a>
-            ))}
-          </div>
+      <div style={{ marginTop: '48px' }}>
+        <p style={{ color: 'var(--text-muted)', marginBottom: '16px', fontSize: '0.9rem' }}>
+          💡 Tip: Use our category pages for best results. We have 50+ categories covering all competitive exam topics in Hindi.
+        </p>
+        <div className="categories-grid" style={{ marginTop: '24px' }}>
+          {[
+            { slug: 'india-gk', title: 'India GK', titleHindi: 'भारत सामान्य ज्ञान', icon: '🇮🇳' },
+            { slug: 'current-affairs', title: 'Current Affairs', titleHindi: 'करेंट अफेयर्स', icon: '📰' },
+            { slug: 'science-gk', title: 'Science GK', titleHindi: 'विज्ञान GK', icon: '🔬' },
+            { slug: 'history-gk', title: 'History GK', titleHindi: 'इतिहास GK', icon: '🏛️' },
+            { slug: 'ssc-gk', title: 'SSC GK', titleHindi: 'SSC GK', icon: '📝' },
+            { slug: 'upsc-gk', title: 'UPSC GK', titleHindi: 'UPSC GK', icon: '🎓' },
+          ].map(cat => (
+            <a key={cat.slug} href={`/${cat.slug}`} className="category-card">
+              <span className="category-icon">{cat.icon}</span>
+              <span className="category-title">{cat.title}</span>
+              <span className="category-title-hindi">{cat.titleHindi}</span>
+            </a>
+          ))}
         </div>
-      )}
+      </div>
     </div>
   );
 }

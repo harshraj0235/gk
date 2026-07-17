@@ -851,6 +851,10 @@ h3 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 600; }
   width: 100%;
 }
 
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: none !important;
+}
+
 /* ============================================
    PAGINATION
    ============================================ */
