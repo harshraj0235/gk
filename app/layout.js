@@ -1,4 +1,5 @@
 import './globals.css';
+import ThemeToggle from './ThemeToggle';
 
 const ADSENSE_CLIENT = 'ca-pub-6815277662449747';
 
@@ -71,6 +72,19 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var savedTheme = localStorage.getItem('theme');
+                  var theme = savedTheme || 'dark';
+                  document.documentElement.setAttribute('data-theme', theme);
+                } catch (e) {}
+              })();
+            `
+          }}
+        />
       </head>
       <body>
         <ReadingProgress />
@@ -114,9 +128,25 @@ function Header() {
         <div className="container">
           <div className="navbar-inner">
             {/* Logo */}
-            <a href="/" className="navbar-logo" aria-label="GK Hindi Pro Home">
-              <div className="logo-icon">📚</div>
-              <span>GK Hindi Pro</span>
+            <a href="/" className="navbar-logo" aria-label="GK Hindi Pro Home" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div className="logo-icon" style={{ 
+                  background: 'var(--primary)', 
+                  color: 'white', 
+                  borderRadius: '8px', 
+                  width: '32px', 
+                  height: '32px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  fontSize: '1.2rem',
+                  boxShadow: '0 2px 8px rgba(255, 107, 53, 0.4)'
+                }}>
+                  📚
+                </div>
+                <span style={{ fontWeight: '900', fontSize: '1.4rem', color: 'var(--primary)', letterSpacing: '-0.5px' }}>GK Hindi Pro</span>
+              </div>
+              <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginLeft: '40px', marginTop: '-2px', fontWeight: '500', letterSpacing: '0.5px' }}>by moneycal</span>
             </a>
 
             {/* Search */}
@@ -141,6 +171,8 @@ function Header() {
                 </li>
               ))}
             </ul>
+
+            <ThemeToggle />
 
             {/* Mobile toggle */}
             <button
@@ -245,13 +277,27 @@ function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <div className="logo">
-              <span>📚</span>
-              <span style={{ background: 'var(--grad-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                GK Hindi Pro
-              </span>
+            <div className="logo" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ 
+                  background: 'var(--primary)', 
+                  color: 'white', 
+                  borderRadius: '8px', 
+                  width: '32px', 
+                  height: '32px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  fontSize: '1.2rem',
+                  boxShadow: '0 2px 8px rgba(255, 107, 53, 0.4)'
+                }}>📚</span>
+                <span style={{ background: 'var(--grad-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: '900', fontSize: '1.4rem', letterSpacing: '-0.5px' }}>
+                  GK Hindi Pro
+                </span>
+              </div>
+              <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginLeft: '40px', marginTop: '-2px', fontWeight: '500', letterSpacing: '0.5px' }}>by moneycal</span>
             </div>
-            <p>
+            <p style={{ marginTop: '16px' }}>
               यह वेबसाइट सामान्य ज्ञान को बढ़ाने का एक प्रयास है। यहाँ SSC, UPSC, Banking, Railway, CTET और अन्य सभी प्रतियोगी परीक्षाओं के लिए 20,000+ प्रश्न उपलब्ध हैं।
             </p>
             <div className="social-links" style={{ marginTop: '16px' }}>
