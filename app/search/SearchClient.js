@@ -2,12 +2,12 @@
 
 import { useSearchParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { generalGKData } from '../../data/general-gk';
-import { indiaGKData } from '../../data/india-gk';
-import { currentAffairsData } from '../../data/current-affairs';
-import { subjectGKData } from '../../data/subject-gk';
-import { examGKData } from '../../data/exam-gk';
-import { moreGKData } from '../../data/more-gk';
+import * as generalGK from '../../data/general-gk';
+import * as indiaGK from '../../data/india-gk';
+import * as currentAffairsGK from '../../data/current-affairs';
+import * as subjectGK from '../../data/subject-gk';
+import * as examGK from '../../data/exam-gk';
+import * as moreGK from '../../data/more-gk';
 
 export default function SearchClient() {
   const searchParams = useSearchParams();
@@ -40,12 +40,12 @@ export default function SearchClient() {
     };
 
     try {
-      extractQs(generalGKData);
-      extractQs(indiaGKData);
-      extractQs(currentAffairsData);
-      extractQs(subjectGKData);
-      extractQs(examGKData);
-      extractQs(moreGKData);
+      extractQs(generalGK);
+      extractQs(indiaGK);
+      extractQs(currentAffairsGK);
+      extractQs(subjectGK);
+      extractQs(examGK);
+      extractQs(moreGK);
     } catch(e) {
       console.error("Error extracting questions", e);
     }
