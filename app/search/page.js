@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import SearchClient from './SearchClient';
+import AdBanner from '../components/AdBanner';
 
 export const metadata = {
   title: 'Search GK Questions | GK Hindi Pro',
@@ -15,6 +16,8 @@ export default function SearchPage() {
         <a href="/">Home</a><span className="sep">›</span>
         <span className="current">Search</span>
       </nav>
+
+      <AdBanner dataAdSlot="2683916778" />
 
       <h1 style={{ marginBottom: '24px' }}>
         🔍 GK Search
@@ -54,6 +57,8 @@ export default function SearchPage() {
       <Suspense fallback={<div style={{ color: 'var(--text-muted)' }}>Loading search results...</div>}>
         <SearchClient />
       </Suspense>
+
+      <AdBanner dataAdSlot="7744671760" />
 
       <div style={{ marginTop: '48px' }}>
         <p style={{ color: 'var(--text-muted)', marginBottom: '16px', fontSize: '0.9rem' }}>

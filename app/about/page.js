@@ -1,3 +1,5 @@
+import AdBanner from '../components/AdBanner';
+
 export const metadata = {
   title: 'About Us | GK Hindi Pro - सामान्य ज्ञान',
   description: 'About GK Hindi Pro - India\'s best Hindi GK website with 20,000+ questions for SSC, UPSC, Banking, Railway exams.',
@@ -11,6 +13,8 @@ export default function AboutPage() {
         <a href="/">Home</a><span className="sep">›</span>
         <span className="current">About Us</span>
       </nav>
+
+      <AdBanner dataAdSlot="2683916778" />
 
       <h1 className="page-title" style={{ marginBottom: '8px', marginTop: '16px' }}>About GK Hindi Pro</h1>
       <p style={{ color: 'var(--text-muted)', marginBottom: '40px' }}>हमारे बारे में</p>

@@ -1,4 +1,5 @@
 import { categories } from '../../data/categories';
+import AdBanner from '../components/AdBanner';
 
 export const metadata = {
   title: 'GK Quiz In Hindi - Online GK Test 2025 | Free Quiz',
@@ -13,6 +14,8 @@ export default function QuizIndexPage() {
         <a href="/">Home</a><span className="sep">›</span>
         <span className="current">Online GK Quiz</span>
       </nav>
+
+      <AdBanner dataAdSlot="2683916778" />
 
       <div style={{ textAlign: 'center', marginBottom: '48px' }}>
         <h1 className="page-title" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
@@ -41,6 +44,8 @@ export default function QuizIndexPage() {
           ))}
         </div>
       </div>
+
+      <AdBanner dataAdSlot="7744671760" />
 
       {/* Categories Grid */}
       <h2 className="section-title">📚 Choose Quiz Category</h2>

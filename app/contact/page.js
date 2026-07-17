@@ -1,3 +1,5 @@
+import AdBanner from '../components/AdBanner';
+
 export const metadata = {
   title: 'Contact Us | GK Hindi Pro',
   description: 'Contact GK Hindi Pro team for any queries, suggestions, or feedback.',
@@ -10,6 +12,8 @@ export default function ContactPage() {
         <a href="/">Home</a><span className="sep">›</span>
         <span className="current">Contact</span>
       </nav>
+
+      <AdBanner dataAdSlot="2683916778" />
 
       <h1 className="page-title" style={{ marginTop: '16px', marginBottom: '8px' }}>Contact Us</h1>
       <p className="font-hindi" style={{ color: 'var(--text-muted)', marginBottom: '40px' }}>

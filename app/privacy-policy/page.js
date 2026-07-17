@@ -1,3 +1,5 @@
+import AdBanner from '../components/AdBanner';
+
 export const metadata = {
   title: 'Privacy Policy | GK Hindi Pro',
   description: 'Privacy Policy for GK Hindi Pro - How we collect, use, and protect your information.',
@@ -11,6 +13,8 @@ export default function PrivacyPage() {
         <a href="/">Home</a><span className="sep">›</span>
         <span className="current">Privacy Policy</span>
       </nav>
+
+      <AdBanner dataAdSlot="2683916778" />
 
       <h1 style={{ marginBottom: '8px', marginTop: '16px' }}>Privacy Policy</h1>
       <p style={{ color: 'var(--text-muted)', marginBottom: '40px' }}>Last updated: July 2025</p>

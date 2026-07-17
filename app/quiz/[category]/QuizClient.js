@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import AdBanner from '../../components/AdBanner';
 
 const QUIZ_TIME = 30; // seconds per question
 
@@ -69,6 +70,8 @@ export default function QuizClient({ category, cat, allQuestions, categories }) 
         <a href="/quiz">Quiz</a><span className="sep">›</span>
         <span className="current">{cat?.title || category} Quiz</span>
       </nav>
+
+      <AdBanner dataAdSlot="2683916778" />
 
       {/* START SCREEN */}
       {gameState === 'start' && (
@@ -266,6 +269,8 @@ export default function QuizClient({ category, cat, allQuestions, categories }) 
           </div>
         </div>
       )}
+
+      <AdBanner dataAdSlot="7744671760" />
 
       {/* Other category quizzes */}
       <div style={{ marginTop: '48px' }}>
