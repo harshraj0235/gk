@@ -389,8 +389,8 @@ function BackToTop() {
       className="back-to-top"
       aria-label="Back to top"
     >
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-        <polyline points="18 15 12 9 6 15"/>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+        <polygon points="12 8 6 16 18 16"/>
       </svg>
     </button>
   );

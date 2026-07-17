@@ -43,8 +43,8 @@ function MCQCard({ q, index, globalShow }) {
             }}
           >
             {showAnswer ? 'Hide Answer' : 'Show Answer'}
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transform: showAnswer ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
-              <polyline points="6 9 12 15 18 9"/>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style={{ transform: showAnswer ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
+              <polygon points="12 16 6 8 18 8"/>
             </svg>
           </button>
         </div>
@@ -78,8 +78,8 @@ function OnelinerCard({ q, index, globalShow }) {
           }}
         >
           {showAnswer ? 'Hide Answer' : 'Show Answer'}
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transform: showAnswer ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
-            <polyline points="6 9 12 15 18 9"/>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" style={{ transform: showAnswer ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
+            <polygon points="12 16 6 8 18 8"/>
           </svg>
         </button>
         
@@ -130,8 +130,8 @@ function PaginatedContent({ items, type, itemsPerPage }) {
           }}
         >
           {globalShow ? 'Hide All Answers' : 'Show All Answers'}
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transform: globalShow ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
-            <polyline points="6 9 12 15 18 9"/>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" style={{ transform: globalShow ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
+            <polygon points="12 16 6 8 18 8"/>
           </svg>
         </button>
       </div>
