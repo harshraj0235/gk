@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="hi" dir="ltr">
+    <html lang="hi" dir="ltr" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -263,6 +263,10 @@ function HeaderScript() {
             const el = document.getElementById('back-to-top');
             if (el) el.classList.toggle('visible', window.scrollY > 400);
           }, { passive: true });
+          const btt = document.getElementById('back-to-top');
+          if (btt) {
+            btt.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+          }
         `,
       }}
     />
@@ -378,7 +382,6 @@ function BackToTop() {
       id="back-to-top"
       className="back-to-top"
       aria-label="Back to top"
-      onClick="window.scrollTo({top:0,behavior:'smooth'})"
     >
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
         <polyline points="18 15 12 9 6 15"/>
