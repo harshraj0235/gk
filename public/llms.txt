@@ -1,0 +1,19 @@
+# GK Hindi Pro
+
+> Best GK in Hindi website with 20,000+ questions for SSC, UPSC, Banking, Railway, CTET. Current Affairs 2025-2026 in Hindi. Free online GK test.
+
+## Overview
+GK Hindi Pro is an educational platform designed for students preparing for competitive exams in India. We provide thousands of General Knowledge questions, daily current affairs, and interactive quizzes in Hindi.
+
+## Important Links
+- **Home**: [https://gk.moneycal.in/](https://gk.moneycal.in/)
+- **India GK**: [https://gk.moneycal.in/india-gk](https://gk.moneycal.in/india-gk)
+- **Current Affairs**: [https://gk.moneycal.in/current-affairs](https://gk.moneycal.in/current-affairs)
+- **Science GK**: [https://gk.moneycal.in/science-gk](https://gk.moneycal.in/science-gk)
+- **Quiz**: [https://gk.moneycal.in/quiz](https://gk.moneycal.in/quiz)
+
+## Contact & Social
+- **Telegram**: https://t.me/
+- **Facebook**: https://facebook.com/
+
+This file provides a standardized LLM-friendly overview of the project as per the llmstxt.org specification.

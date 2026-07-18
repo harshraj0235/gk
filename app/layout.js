@@ -61,6 +61,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <link rel="alternate" type="text/markdown" title="LLM-friendly version" href="/llms.txt" />
         {/* Google AdSense */}
         <script
           async
