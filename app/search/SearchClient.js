@@ -2,12 +2,6 @@
 
 import { useSearchParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import * as generalGK from '../../data/general-gk';
-import * as indiaGK from '../../data/india-gk';
-import * as currentAffairsGK from '../../data/current-affairs';
-import * as subjectGK from '../../data/subject-gk';
-import * as examGK from '../../data/exam-gk';
-import * as moreGK from '../../data/more-gk';
 
 export default function SearchClient() {
   const searchParams = useSearchParams();
@@ -21,54 +15,38 @@ export default function SearchClient() {
       return;
     }
     
-    // Aggregate questions from all modules
-    const allQuestions = [];
-    
-    const extractQs = (dataObj) => {
-      if (!dataObj) return;
-      Object.values(dataObj).forEach(val => {
-        if (Array.isArray(val)) {
-          val.forEach(item => {
-            if (item && item.question && item.answer) {
-              allQuestions.push(item);
-            } else if (item && item.q && item.a) {
-              allQuestions.push({ question: item.q, answer: item.a });
-            }
-          });
-        }
-      });
+    const fetchAndSearch = async () => {
+      try {
+        const res = await fetch('/search-index.json');
+        if (!res.ok) throw new Error('Failed to fetch search index');
+        const allQuestions = await res.json();
+
+        const lowerQ = query.toLowerCase();
+        
+        const matched = allQuestions.filter(q => 
+          q.q.toLowerCase().includes(lowerQ) || 
+          q.a.toLowerCase().includes(lowerQ)
+        );
+        
+        // Deduplicate
+        const unique = [];
+        const seen = new Set();
+        matched.forEach(m => {
+          if (!seen.has(m.q)) {
+            seen.add(m.q);
+            unique.push(m);
+          }
+        });
+
+        setResults(unique.slice(0, 100)); // limit to 100
+      } catch (err) {
+        console.error("Search error:", err);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    try {
-      extractQs(generalGK);
-      extractQs(indiaGK);
-      extractQs(currentAffairsGK);
-      extractQs(subjectGK);
-      extractQs(examGK);
-      extractQs(moreGK);
-    } catch(e) {
-      console.error("Error extracting questions", e);
-    }
-
-    const lowerQ = query.toLowerCase();
-    
-    const matched = allQuestions.filter(q => 
-      q.question.toLowerCase().includes(lowerQ) || 
-      q.answer.toLowerCase().includes(lowerQ)
-    );
-    
-    // Deduplicate
-    const unique = [];
-    const seen = new Set();
-    matched.forEach(m => {
-      if (!seen.has(m.question)) {
-        seen.add(m.question);
-        unique.push(m);
-      }
-    });
-
-    setResults(unique.slice(0, 100)); // limit to 100
-    setLoading(false);
+    fetchAndSearch();
   }, [query]);
 
   if (!query) return null;
@@ -88,10 +66,10 @@ export default function SearchClient() {
               <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                 <span className="question-num" style={{ background: 'var(--bg-secondary)', color: 'var(--primary)', padding: '4px 12px', borderRadius: '8px', fontWeight: 'bold' }}>{i + 1}</span>
                 <div style={{ flex: 1 }}>
-                  <p className="question-text" style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'var(--text)' }}>{item.question}</p>
+                  <p className="question-text" style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '12px', color: 'var(--text)' }}>{item.q}</p>
                   <div className="answer-box show" style={{ display: 'block', background: 'var(--bg-secondary)', padding: '12px', borderRadius: '8px', borderLeft: '4px solid var(--success)' }}>
                     <span className="answer-label" style={{ fontWeight: 'bold', color: 'var(--success)', marginRight: '8px' }}>Answer:</span>
-                    <span style={{ color: 'var(--text)' }}>{item.answer}</span>
+                    <span style={{ color: 'var(--text)' }}>{item.a}</span>
                   </div>
                 </div>
               </div>
@@ -106,3 +84,4 @@ export default function SearchClient() {
     </div>
   );
 }
+
