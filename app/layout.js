@@ -104,7 +104,7 @@ export default function RootLayout({ children }) {
               (function() {
                 try {
                   var savedTheme = localStorage.getItem('theme');
-                  var theme = savedTheme || 'dark';
+                  var theme = savedTheme || 'light';
                   document.documentElement.setAttribute('data-theme', theme);
                 } catch (e) {}
               })();
