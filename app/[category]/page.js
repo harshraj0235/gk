@@ -5,6 +5,7 @@ import { currentAffairsData } from '../../data/current-affairs';
 import { computerGKData, geographyGKData, sportsGKData, economicsGKData, polityGKData } from '../../data/subject-gk';
 import { sscGKData, upscGKData, bankGKData, railGKData, biharGKData, armyGKData } from '../../data/exam-gk';
 import { rajasthanGKData, upGKData, mpGKData, hindiGrammarGKData, reasoningGKData, mathGKData, oneLineGKData } from '../../data/more-gk';
+import { technologyGKData } from '../../data/technology-gk-full';
 import { gujaratGKData, westBengalGKData, punjabGKData, uttarakhandGKData, tamilnaduGKData, keralaGKData, assamGKData, odishaGKData, telanganaGKData } from '../../data/new-state-gk';
 import { notFound } from 'next/navigation';
 import PaginatedList from '../components/PaginatedList';
@@ -74,6 +75,7 @@ function getCategoryData(slug) {
     case 'assam-gk': return assamGKData;
     case 'odisha-gk': return odishaGKData;
     case 'telangana-gk': return telanganaGKData;
+    case 'technology-gk': return technologyGKData;
     default: return null;
   }
 }
