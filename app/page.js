@@ -1,5 +1,6 @@
 import { categories, groups, getGroupCategories } from '../data/categories';
 import { generalGKData } from '../data/general-gk';
+import CurrentDate from './components/CurrentDate';
 
 const ADSENSE_CLIENT = 'ca-pub-6815277662449747';
 const ADSENSE_SLOT_ATF = '2683916778';
@@ -92,7 +93,7 @@ export default function HomePage() {
                 GK In Hindi – GK Questions In Hindi – सामान्य ज्ञान 2026
               </h2>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginBottom: '8px' }}>
-                📅 Last Updated: {new Date().toLocaleDateString('hi-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
+                📅 Last Updated: <CurrentDate />
               </p>
               <p className="font-hindi" style={{ color: 'var(--text-muted)', marginBottom: '20px', lineHeight: '1.8' }}>
                 यह वेबसाइट सामान्य ज्ञान को बढ़ाने का एक प्रयास है। यह विभिन्न विषयों से संबन्धित सामान्य ज्ञान के प्रश्नों
