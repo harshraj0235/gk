@@ -4,7 +4,7 @@ import ThemeToggle from './ThemeToggle';
 const ADSENSE_CLIENT = 'ca-pub-6815277662449747';
 
 export const metadata = {
-  metadataBase: new URL('https://gk.moneycal.in'),
+  metadataBase: new URL('https://gkhindi.moneycal.in'),
   title: {
     default: 'GK Hindi Pro - GK Questions In Hindi 2025 | सामान्य ज्ञान',
     template: '%s | GK Hindi Pro - सामान्य ज्ञान'
@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'hi_IN',
-    url: 'https://gk.moneycal.in',
+    url: 'https://gkhindi.moneycal.in',
     siteName: 'GK Hindi Pro',
     title: 'GK Hindi Pro - GK Questions In Hindi 2025 | सामान्य ज्ञान',
     description: 'Best GK in Hindi website with 20,000+ questions for SSC, UPSC, Banking, Railway. Free quiz & current affairs 2025.',
@@ -35,7 +35,10 @@ export const metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  alternates: { canonical: 'https://gk.moneycal.in' },
+  alternates: {
+    canonical: 'https://gkhindi.moneycal.in',
+    languages: { 'hi-IN': 'https://gkhindi.moneycal.in' },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -43,13 +46,24 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'GK Hindi Pro',
-    url: 'https://gk.moneycal.in',
-    description: 'Best GK in Hindi - 20,000+ General Knowledge Questions',
+    url: 'https://gkhindi.moneycal.in',
+    description: 'Best GK in Hindi - 20,000+ General Knowledge Questions for SSC, UPSC, Banking, Railway, CTET',
+    inLanguage: 'hi',
     potentialAction: {
       '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: 'https://gk.moneycal.in/search?q={search_term_string}' },
+      target: { '@type': 'EntryPoint', urlTemplate: 'https://gkhindi.moneycal.in/search?q={search_term_string}' },
       'query-input': 'required name=search_term_string',
     },
+  };
+
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'GK Hindi Pro',
+    url: 'https://gkhindi.moneycal.in',
+    logo: 'https://gkhindi.moneycal.in/og-image.jpg',
+    description: 'भारत की सबसे बेहतरीन GK वेबसाइट - 20,000+ सामान्य ज्ञान प्रश्न हिंदी में',
+    sameAs: ['https://t.me/', 'https://facebook.com/'],
   };
 
   return (
@@ -72,6 +86,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <script
           dangerouslySetInnerHTML={{

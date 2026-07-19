@@ -51,6 +51,16 @@ export const categories = [
   { slug: 'indian-polity-gk', title: 'Indian Polity GK', titleHindi: 'भारतीय राजव्यवस्था सामान्य ज्ञान', description: 'Indian Polity GK Questions in Hindi', icon: '⚖️', color: '#FF6B35', group: 'general' },
   { slug: 'states-capitals-gk', title: 'States/Capitals GK', titleHindi: 'राज्य/राजधानी सामान्य ज्ञान', description: 'Indian States and Capitals GK in Hindi', icon: '🗺️', color: '#2DC653', group: 'general' },
   { slug: 'one-line-gk', title: 'One Line GK', titleHindi: 'वन लाइन सामान्य ज्ञान', description: '20,000+ One Line GK Questions in Hindi', icon: '⚡', color: '#FFD700', group: 'general' },
+  // New State GK Categories
+  { slug: 'gujarat-gk', title: 'Gujarat GK', titleHindi: 'गुजरात सामान्य ज्ञान', description: 'Gujarat GK Questions in Hindi - गुजरात राज्य से संबंधित प्रश्न', icon: '🦁', color: '#FF6B35', group: 'state' },
+  { slug: 'west-bengal-gk', title: 'West Bengal GK', titleHindi: 'पश्चिम बंगाल सामान्य ज्ञान', description: 'West Bengal GK Questions in Hindi', icon: '🐯', color: '#004E92', group: 'state' },
+  { slug: 'punjab-gk', title: 'Punjab GK', titleHindi: 'पंजाब सामान्य ज्ञान', description: 'Punjab GK Questions in Hindi', icon: '🌾', color: '#FF4D6D', group: 'state' },
+  { slug: 'uttarakhand-gk', title: 'Uttarakhand GK', titleHindi: 'उत्तराखंड सामान्य ज्ञान', description: 'Uttarakhand GK Questions in Hindi', icon: '🏔️', color: '#2DC653', group: 'state' },
+  { slug: 'tamilnadu-gk', title: 'Tamil Nadu GK', titleHindi: 'तमिलनाडु सामान्य ज्ञान', description: 'Tamil Nadu GK Questions in Hindi', icon: '🛕', color: '#D4A017', group: 'state' },
+  { slug: 'kerala-gk', title: 'Kerala GK', titleHindi: 'केरल सामान्य ज्ञान', description: 'Kerala GK Questions in Hindi', icon: '🌴', color: '#00B4D8', group: 'state' },
+  { slug: 'assam-gk', title: 'Assam GK', titleHindi: 'असम सामान्य ज्ञान', description: 'Assam GK Questions in Hindi', icon: '🦏', color: '#7B2FBE', group: 'state' },
+  { slug: 'odisha-gk', title: 'Odisha GK', titleHindi: 'ओडिशा सामान्य ज्ञान', description: 'Odisha GK Questions in Hindi', icon: '🌊', color: '#FF6B35', group: 'state' },
+  { slug: 'telangana-gk', title: 'Telangana GK', titleHindi: 'तेलंगाना सामान्य ज्ञान', description: 'Telangana GK Questions in Hindi', icon: '🏗️', color: '#FFD700', group: 'state' },
 ];
 
 export const getCategoryBySlug = (slug) => categories.find(c => c.slug === slug);

@@ -27,11 +27,11 @@ export async function generateMetadata({ params }) {
     title: `${cat.title} In Hindi - ${cat.titleHindi} | GK Hindi Pro`,
     description: `${cat.description} - Best ${cat.title} Questions in Hindi for SSC, UPSC, Banking, Railway, CTET. Free quiz and practice tests.`,
     keywords: `${cat.title} in Hindi, ${cat.titleHindi}, ${cat.title} questions, ${cat.title} quiz`,
-    alternates: { canonical: `https://gk.moneycal.in/${category}` },
+    alternates: { canonical: `https://gkhindi.moneycal.in/${category}` },
     openGraph: {
       title: `${cat.title} In Hindi - ${cat.titleHindi}`,
       description: cat.description,
-      url: `https://gk.moneycal.in/${category}`,
+      url: `https://gkhindi.moneycal.in/${category}`,
     },
   };
 }
@@ -94,8 +94,8 @@ export default async function CategoryPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gk.moneycal.in' },
-      { '@type': 'ListItem', position: 2, name: cat.title, item: `https://gk.moneycal.in/${category}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gkhindi.moneycal.in' },
+      { '@type': 'ListItem', position: 2, name: cat.title, item: `https://gkhindi.moneycal.in/${category}` },
     ],
   };
 

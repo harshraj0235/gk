@@ -9,7 +9,7 @@ export default function robots() {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://gk.moneycal.in/sitemap.xml',
-    host: 'https://gk.moneycal.in',
+    sitemap: 'https://gkhindi.moneycal.in/sitemap.xml',
+    host: 'https://gkhindi.moneycal.in',
   };
 }
