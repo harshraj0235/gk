@@ -37,11 +37,15 @@ export default function SearchClient() {
         setCatResults(matchedCats);
 
         // Filter questions
-        const matchedQs = allQuestions.filter(q => 
-          q.q.toLowerCase().includes(lowerQ) || 
-          q.a.toLowerCase().includes(lowerQ) ||
-          (q.c && q.c.toLowerCase().includes(lowerQ))
-        );
+        const matchedQs = allQuestions.filter(q => {
+          const textQ = String(q.q || '').toLowerCase();
+          const textA = String(q.a || '').toLowerCase();
+          const textC = String(q.c || '').toLowerCase();
+          
+          return textQ.includes(lowerQ) || 
+                 textA.includes(lowerQ) ||
+                 textC.includes(lowerQ);
+        });
         
         // Deduplicate
         const unique = [];
