@@ -431,10 +431,10 @@ function QuestionCard({ item, index }) {
       <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
         <span className="question-num">{index + 1}</span>
         <div style={{ flex: 1 }}>
-          <p className="question-text">{item.question}</p>
+          <p className="question-text">{item.question || item.q}</p>
           <div className="answer-box" id={`ans-${item.id}`}>
             <span className="answer-label">Answer:</span>
-            {item.answer}
+            {item.answer || item.a}
           </div>
           <button
             type="button"

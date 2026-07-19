@@ -266,10 +266,10 @@ export default async function CategoryPage({ params }) {
                       <div style={{ display: 'flex', gap: '12px' }}>
                         <span className="question-num">{i + 1}</span>
                         <div style={{ flex: 1 }}>
-                          <p className="question-text">{q.question}</p>
+                          <p className="question-text">{q.question || q.q}</p>
                           <div className="answer-box" id={`rv-${q.id}`}>
                             <span className="answer-label">Answer:</span>
-                            {q.answer}
+                            {q.answer || q.a}
                           </div>
                           <button type="button" className="show-answer-btn" aria-controls={`rv-${q.id}`}>
                             Show Answer ▼
@@ -395,7 +395,7 @@ function MCQCard({ q, index }) {
       <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
         <span className="question-num">{index + 1}</span>
         <div style={{ flex: 1 }}>
-          <p className="question-text">{q.question}</p>
+          <p className="question-text">{q.question || q.q}</p>
           <ul className="options-list">
             {q.options.map((opt, i) => (
               <li key={i} className="option-item" role="button" tabIndex={0}>

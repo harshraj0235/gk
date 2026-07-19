@@ -17,7 +17,7 @@ function MCQCard({ q, index, globalShow }) {
       <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
         <span className="question-num">{index + 1}</span>
         <div style={{ flex: 1 }}>
-          <p className="question-text">{q.question}</p>
+          <p className="question-text">{q.question || q.q}</p>
           <ul className="options-list">
             {q.options.map((opt, i) => {
                const isCorrect = showAnswer && i === q.answer;
@@ -65,7 +65,7 @@ function OnelinerCard({ q, index, globalShow }) {
     <div className="oneliner-item" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
       <div style={{ display: 'flex', gap: '8px', width: '100%' }}>
         <span className="oneliner-num">{index + 1}.</span>
-        <span className="oneliner-q" style={{ flex: 1 }}>{q.question}</span>
+        <span className="oneliner-q" style={{ flex: 1 }}>{q.question || q.q}</span>
       </div>
       
       <div style={{ width: '100%', marginTop: '8px', paddingLeft: '24px' }}>
@@ -85,7 +85,7 @@ function OnelinerCard({ q, index, globalShow }) {
         
         {showAnswer && (
           <div className="oneliner-a animate-fadeInUp" style={{ display: 'block', marginTop: '12px' }}>
-            ✅ {q.answer}
+            ✅ {q.answer || q.a}
           </div>
         )}
       </div>

@@ -43,13 +43,13 @@ export default function QuizClient({ category, cat, allQuestions, categories }) 
     const isCorrect = idx === q.answer;
     setSelected(idx);
     if (isCorrect) setScore(s => s + 1);
-    setAnswers(a => [...a, { question: q.question, correct: q.answer, selected: idx, isCorrect }]);
+    setAnswers(a => [...a, { question: q.question || q.q, correct: q.answer, selected: idx, isCorrect }]);
   };
 
   const handleNext = (timeout = false) => {
     if (timeout && selected === null) {
       const q = questions[currentQ];
-      setAnswers(a => [...a, { question: q.question, correct: q.answer, selected: -1, isCorrect: false }]);
+      setAnswers(a => [...a, { question: q.question || q.q, correct: q.answer, selected: -1, isCorrect: false }]);
     }
     if (currentQ + 1 >= questions.length) {
       setGameState('results');
@@ -135,7 +135,7 @@ export default function QuizClient({ category, cat, allQuestions, categories }) 
               Q{currentQ + 1} of {questions.length}
             </p>
             <h2 className="font-hindi" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', fontWeight: '700', lineHeight: '1.6', color: 'var(--text)' }}>
-              {questions[currentQ].question}
+              {questions[currentQ].question || questions[currentQ].q}
             </h2>
           </div>
 
