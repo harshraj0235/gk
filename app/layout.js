@@ -8,10 +8,10 @@ const ADSENSE_CLIENT = 'ca-pub-6815277662449747';
 export const metadata = {
   metadataBase: new URL('https://gkhindi.moneycal.in'),
   title: {
-    default: 'GK Hindi Pro - GK Questions In Hindi 2025 | सामान्य ज्ञान',
+    default: 'GK Hindi Pro - GK Questions In Hindi 2026 | सामान्य ज्ञान',
     template: '%s | GK Hindi Pro - सामान्य ज्ञान'
   },
-  description: 'Best GK in Hindi website with 20,000+ questions for SSC, UPSC, Banking, Railway, CTET. Current Affairs 2025-2026 in Hindi. Free online GK test.',
+  description: 'Best GK in Hindi website with 20,000+ questions for SSC, UPSC, Banking, Railway, CTET. Current Affairs 2026-2027 in Hindi. Free online GK test.',
   keywords: ['GK in Hindi', 'GK Questions In Hindi', 'सामान्य ज्ञान', 'Current Affairs Hindi', 'SSC GK', 'UPSC GK', 'GK Quiz Hindi'],
   authors: [{ name: 'GK Hindi Pro' }],
   creator: 'GK Hindi Pro',
@@ -22,13 +22,13 @@ export const metadata = {
     locale: 'hi_IN',
     url: 'https://gkhindi.moneycal.in',
     siteName: 'GK Hindi Pro',
-    title: 'GK Hindi Pro - GK Questions In Hindi 2025 | सामान्य ज्ञान',
-    description: 'Best GK in Hindi website with 20,000+ questions for SSC, UPSC, Banking, Railway. Free quiz & current affairs 2025.',
+    title: 'GK Hindi Pro - GK Questions In Hindi 2026 | सामान्य ज्ञान',
+    description: 'Best GK in Hindi website with 20,000+ questions for SSC, UPSC, Banking, Railway. Free quiz & current affairs 2026.',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'GK Hindi Pro - सामान्य ज्ञान' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GK Hindi Pro - GK Questions In Hindi 2025',
+    title: 'GK Hindi Pro - GK Questions In Hindi 2026',
     description: 'Best GK in Hindi - 20,000+ questions for all competitive exams',
     images: ['/og-image.jpg'],
   },

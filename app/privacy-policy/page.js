@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       <AdBanner dataAdSlot="2683916778" />
 
       <h1 style={{ marginBottom: '8px', marginTop: '16px' }}>Privacy Policy</h1>
-      <p style={{ color: 'var(--text-muted)', marginBottom: '40px' }}>Last updated: July 2025</p>
+      <p style={{ color: 'var(--text-muted)', marginBottom: '40px' }}>Last updated: July 2026</p>
 
       {[
         {

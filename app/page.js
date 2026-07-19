@@ -6,12 +6,12 @@ const ADSENSE_SLOT_ATF = '2683916778';
 const ADSENSE_SLOT_BTF = '7744671760';
 
 export const metadata = {
-  title: 'GK In Hindi - GK Questions In Hindi 2025-2026 | सामान्य ज्ञान',
-  description: '20,000+ GK Questions in Hindi (सामान्य ज्ञान प्रश्न उत्तर) for SSC, UPSC, Banking, Railway, CTET 2025-2026. Daily Current Affairs, One Line GK, MCQ Quiz, Static GK हिंदी में। Top 100 GK, Lucent GK, भारत GK सभी प्रतियोगी परीक्षाओं के लिए।',
-  keywords: 'GK in Hindi, GK Questions In Hindi, सामान्य ज्ञान, Current Affairs 2025, Current Affairs 2026, SSC GK, UPSC GK, Hindi GK, सामान्य ज्ञान प्रश्न उत्तर, GK Quiz Hindi, gk ke question, samanya gyan, general knowledge in hindi, top 100 gk questions in hindi, lucent gk in hindi, daily gk in hindi, gk today in hindi',
+  title: 'GK In Hindi - GK Questions In Hindi 2026-2027 | सामान्य ज्ञान',
+  description: '20,000+ GK Questions in Hindi (सामान्य ज्ञान प्रश्न उत्तर) for SSC, UPSC, Banking, Railway, CTET 2026-2027. Daily Current Affairs, One Line GK, MCQ Quiz, Static GK हिंदी में। Top 100 GK, Lucent GK, भारत GK सभी प्रतियोगी परीक्षाओं के लिए।',
+  keywords: 'GK in Hindi, GK Questions In Hindi, सामान्य ज्ञान, Current Affairs 2026, Current Affairs 2027, SSC GK, UPSC GK, Hindi GK, सामान्य ज्ञान प्रश्न उत्तर, GK Quiz Hindi, gk ke question, samanya gyan, general knowledge in hindi, top 100 gk questions in hindi, lucent gk in hindi, daily gk in hindi, gk today in hindi',
   alternates: { canonical: 'https://gkhindi.moneycal.in' },
   openGraph: {
-    title: 'GK In Hindi 2025-2026 - 20,000+ सामान्य ज्ञान प्रश्न | GK Hindi Pro',
+    title: 'GK In Hindi 2026-2027 - 20,000+ सामान्य ज्ञान प्रश्न | GK Hindi Pro',
     description: '20,000+ GK Questions in Hindi for SSC, UPSC, Banking, Railway. Free online quiz, daily current affairs & static GK.',
     url: 'https://gkhindi.moneycal.in',
   },
@@ -51,7 +51,7 @@ export default function HomePage() {
             <h1>
               <span className="highlight">GK In Hindi</span>
               <br />
-              सामान्य ज्ञान 2025-2026
+              सामान्य ज्ञान 2026-2027
             </h1>
             <p className="hero-sub">
               SSC, UPSC, Banking, Railway, CTET और सभी प्रतियोगी परीक्षाओं के लिए
@@ -89,7 +89,7 @@ export default function HomePage() {
             {/* Page intro */}
             <div style={{ paddingTop: '24px' }}>
               <h2 style={{ fontSize: '1.6rem', marginBottom: '8px' }}>
-                GK In Hindi – GK Questions In Hindi – सामान्य ज्ञान 2025
+                GK In Hindi – GK Questions In Hindi – सामान्य ज्ञान 2026
               </h2>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginBottom: '8px' }}>
                 📅 Last Updated: {new Date().toLocaleDateString('hi-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
@@ -130,10 +130,10 @@ export default function HomePage() {
               <AdPushScript />
             </div>
 
-            {/* TOP 20 GK 2025 */}
+            {/* TOP 20 GK 2026 */}
             <section aria-labelledby="top20-heading">
               <h2 id="top20-heading" className="section-title">
-                🔥 2025 में टॉप 20 GK प्रश्न | Top 20 GK Questions In 2025
+                🔥 2026 में टॉप 20 GK प्रश्न | Top 20 GK Questions In 2026
               </h2>
               <div className="oneliner-list">
                 {generalGKData.top20_2025.map((item, i) => (
@@ -230,7 +230,7 @@ export default function HomePage() {
             {/* Science & Tech */}
             <section style={{ marginTop: '40px' }} aria-labelledby="sci-heading">
               <h2 id="sci-heading" className="section-title">
-                🔬 Science & Technology GK | विज्ञान प्रौद्योगिकी GK 2025
+                🔬 Science & Technology GK | विज्ञान प्रौद्योगिकी GK 2026
               </h2>
               <ol style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 {generalGKData.scienceTech.map((item, i) => (

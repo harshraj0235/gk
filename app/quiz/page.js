@@ -2,9 +2,15 @@ import { categories } from '../../data/categories';
 import AdBanner from '../components/AdBanner';
 
 export const metadata = {
-  title: 'GK Quiz In Hindi - Online GK Test 2025 | Free Quiz',
-  description: 'Free Online GK Quiz in Hindi. Practice 50+ categories with timer-based interactive quiz for SSC, UPSC, Banking, Railway exams.',
-  alternates: { canonical: 'https://gk.moneycal.in/quiz' },
+  title: 'GK Quiz In Hindi - Online GK Test 2026 | Free Quiz',
+  description: '1000+ Online GK Tests in Hindi. Practice objective questions (MCQ) for SSC, Railway, UPSC, Banking, and Police exams. Free mock test 2026.',
+  keywords: 'GK Quiz In Hindi, Online GK Test, Free Mock Test, Hindi Quiz 2026, SSC Quiz, Railway Quiz, UPSC Mock Test, Online test for competitive exams',
+  alternates: { canonical: 'https://gkhindi.moneycal.in/quiz' },
+  openGraph: {
+    title: 'GK Quiz In Hindi - Online GK Test 2026',
+    description: 'Free Online GK Tests in Hindi. Practice mock tests and improve your GK score.',
+    url: 'https://gkhindi.moneycal.in/quiz',
+  }
 };
 
 export default function QuizIndexPage() {

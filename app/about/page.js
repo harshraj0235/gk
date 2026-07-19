@@ -46,7 +46,7 @@ export default function AboutPage() {
         <h2 style={{ marginBottom: '16px', color: 'var(--primary)' }}>📋 What We Cover</h2>
         <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
           {[
-            'India GK, World GK, Current Affairs 2025-2026',
+            'India GK, World GK, Current Affairs 2026-2027',
             'Science GK - Biology, Physics, Chemistry',
             'History GK, Geography GK, Political Science',
             'SSC, UPSC, Banking, Railway, CTET exam preparation',
