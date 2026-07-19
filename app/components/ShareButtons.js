@@ -33,19 +33,19 @@ export default function ShareButtons({ title, text, url }) {
       name: 'WhatsApp',
       icon: '💬',
       color: 'bg-green-500',
-      url: \`https://api.whatsapp.com/send?text=\${encodeURIComponent(shareText + ' ' + currentUrl)}\`
+      url: `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + ' ' + currentUrl)}`
     },
     {
       name: 'Facebook',
       icon: '📘',
       color: 'bg-blue-600',
-      url: \`https://www.facebook.com/sharer/sharer.php?u=\${encodeURIComponent(currentUrl)}\`
+      url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`
     },
     {
       name: 'Telegram',
       icon: '✈️',
       color: 'bg-blue-400',
-      url: \`https://t.me/share/url?url=\${encodeURIComponent(currentUrl)}&text=\${encodeURIComponent(shareText)}\`
+      url: `https://t.me/share/url?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(shareText)}`
     }
   ];
 

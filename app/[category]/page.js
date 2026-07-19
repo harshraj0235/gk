@@ -9,6 +9,7 @@ import { gujaratGKData, westBengalGKData, punjabGKData, uttarakhandGKData, tamil
 import { notFound } from 'next/navigation';
 import PaginatedList from '../components/PaginatedList';
 import ShareButtons from '../components/ShareButtons';
+import TableOfContents from '../components/TableOfContents';
 
 const ADSENSE_CLIENT = 'ca-pub-6815277662449747';
 const ADSENSE_SLOT_ATF = '2683916778';
@@ -171,6 +172,12 @@ export default async function CategoryPage({ params }) {
               text={cat.description} 
               url={`https://gkhindi.moneycal.in/${category}`} 
             />
+
+            {/* Table of Contents */}
+            <TableOfContents sections={[
+              ...(mcqQuestions.length > 0 ? [{ id: 'mcq', title: 'बहुविकल्पीय प्रश्न (MCQ)' }] : []),
+              ...(oneliners.length > 0 ? [{ id: 'oneliners', title: 'वन-लाइनर प्रश्न (One Liners)' }] : [])
+            ]} />
 
             {/* MCQ Questions */}
             {mcqQuestions.length > 0 && (
