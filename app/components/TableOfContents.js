@@ -7,29 +7,85 @@ export default function TableOfContents({ sections, title = "विषय सू
   if (!sections || sections.length === 0) return null;
 
   return (
-    <div className="my-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+    <div style={{
+      margin: '32px 0',
+      background: 'var(--bg-card)',
+      borderRadius: 'var(--radius-lg)',
+      border: '1px solid var(--border)',
+      boxShadow: 'var(--shadow-sm)',
+      overflow: 'hidden'
+    }}>
       <div 
-        className="flex justify-between items-center p-4 bg-gray-50 dark:bg-gray-750 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition"
         onClick={() => setIsOpen(!isOpen)}
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '16px 20px',
+          background: 'var(--bg-secondary)',
+          cursor: 'pointer',
+          transition: 'var(--transition)'
+        }}
+        onMouseOver={(e) => e.currentTarget.style.background = 'var(--bg-card-hover)'}
+        onMouseOut={(e) => e.currentTarget.style.background = 'var(--bg-secondary)'}
       >
-        <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 flex items-center gap-2">
+        <h3 className="font-hindi" style={{
+          fontSize: '1.1rem',
+          fontWeight: '700',
+          color: 'var(--text)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '12px',
+          margin: 0
+        }}>
           <span>📑</span> {title}
         </h3>
-        <span className={`text-gray-500 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+        <span style={{
+          color: 'var(--text-muted)',
+          transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+          transition: 'transform 0.3s ease'
+        }}>
           ▼
         </span>
       </div>
       
       {isOpen && (
-        <div className="p-4 bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700">
-          <ul className="space-y-2">
+        <div style={{
+          padding: '20px',
+          borderTop: '1px solid var(--border)'
+        }}>
+          <ul style={{
+            listStyle: 'none',
+            padding: 0,
+            margin: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '14px'
+          }}>
             {sections.map((section, index) => (
-              <li key={index} className="flex">
+              <li key={index} style={{ margin: 0 }}>
                 <a 
                   href={`#${section.id}`}
-                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline flex items-center gap-2"
+                  className="font-hindi"
+                  style={{
+                    color: 'var(--primary-light)',
+                    textDecoration: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    fontSize: '1.05rem',
+                    transition: 'color 0.2s'
+                  }}
+                  onMouseOver={(e) => e.currentTarget.style.color = 'var(--primary)'}
+                  onMouseOut={(e) => e.currentTarget.style.color = 'var(--primary-light)'}
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block"></span>
+                  <span style={{
+                    width: '6px',
+                    height: '6px',
+                    borderRadius: '50%',
+                    background: 'var(--primary)',
+                    display: 'inline-block'
+                  }}></span>
                   {section.title}
                 </a>
               </li>
