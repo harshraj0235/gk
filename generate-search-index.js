@@ -37,8 +37,9 @@ for (const file of files) {
   
   // Transform ES exports to CommonJS
   content = content.replace(/export\s+const\s+(\w+)\s*=/g, 'exports.$1 =');
-  // Remove any import statements
+  // Remove any import statements and export { ... } from statements
   content = content.replace(/import\s+.*?;\n/g, '');
+  content = content.replace(/export\s+\{.*?\}.*?;\n/g, '');
 
   try {
     const sandbox = { exports: {} };
