@@ -61,7 +61,7 @@ export default function ShareButtons({ title, text, url }) {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={\`flex items-center gap-2 px-4 py-2 rounded-full text-white font-medium text-sm transition hover:opacity-90 shadow-sm \${link.color}\`}
+            className={`flex items-center gap-2 px-4 py-2 rounded-full text-white font-medium text-sm transition hover:opacity-90 shadow-sm ${link.color}`}
           >
             <span>{link.icon}</span> {link.name}
           </a>

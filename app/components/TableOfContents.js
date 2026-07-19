@@ -15,7 +15,7 @@ export default function TableOfContents({ sections, title = "विषय सू
         <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 flex items-center gap-2">
           <span>📑</span> {title}
         </h3>
-        <span className={\`text-gray-500 transform transition-transform duration-300 \${isOpen ? 'rotate-180' : ''}\`}>
+        <span className={`text-gray-500 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
           ▼
         </span>
       </div>
@@ -26,7 +26,7 @@ export default function TableOfContents({ sections, title = "विषय सू
             {sections.map((section, index) => (
               <li key={index} className="flex">
                 <a 
-                  href={\`#\${section.id}\`}
+                  href={`#${section.id}`}
                   className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block"></span>
