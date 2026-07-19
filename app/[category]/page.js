@@ -5,8 +5,10 @@ import { currentAffairsData } from '../../data/current-affairs';
 import { computerGKData, geographyGKData, sportsGKData, economicsGKData, polityGKData } from '../../data/subject-gk';
 import { sscGKData, upscGKData, bankGKData, railGKData, biharGKData, armyGKData } from '../../data/exam-gk';
 import { rajasthanGKData, upGKData, mpGKData, hindiGrammarGKData, reasoningGKData, mathGKData, oneLineGKData } from '../../data/more-gk';
+import { gujaratGKData, westBengalGKData, punjabGKData, uttarakhandGKData, tamilnaduGKData, keralaGKData, assamGKData, odishaGKData, telanganaGKData } from '../../data/new-state-gk';
 import { notFound } from 'next/navigation';
 import PaginatedList from '../components/PaginatedList';
+import ShareButtons from '../components/ShareButtons';
 
 const ADSENSE_CLIENT = 'ca-pub-6815277662449747';
 const ADSENSE_SLOT_ATF = '2683916778';
@@ -62,6 +64,15 @@ function getCategoryData(slug) {
     case 'reasoning': return reasoningGKData;
     case 'math-gk': return mathGKData;
     case 'one-line-gk': return oneLineGKData;
+    case 'gujarat-gk': return gujaratGKData;
+    case 'west-bengal-gk': return westBengalGKData;
+    case 'punjab-gk': return punjabGKData;
+    case 'uttarakhand-gk': return uttarakhandGKData;
+    case 'tamilnadu-gk': return tamilnaduGKData;
+    case 'kerala-gk': return keralaGKData;
+    case 'assam-gk': return assamGKData;
+    case 'odisha-gk': return odishaGKData;
+    case 'telangana-gk': return telanganaGKData;
     default: return null;
   }
 }
@@ -146,13 +157,20 @@ export default async function CategoryPage({ params }) {
             </div>
 
             {/* ATF Ad */}
-            <div className="ad-container">
-              <span className="ad-label">Advertisement</span>
+            <div className="ad-container" style={{ margin: '20px 0' }}>
+              <span className="ad-label" style={{ display: 'block', fontSize: '11px', color: '#888', textAlign: 'center', marginBottom: '4px' }}>Advertisement</span>
               <ins className="adsbygoogle" style={{ display: 'block' }}
                 data-ad-client={ADSENSE_CLIENT} data-ad-slot={ADSENSE_SLOT_ATF}
                 data-ad-format="auto" data-full-width-responsive="true" />
               <AdScript />
             </div>
+
+            {/* Share Buttons */}
+            <ShareButtons 
+              title={cat.title} 
+              text={cat.description} 
+              url={`https://gkhindi.moneycal.in/${category}`} 
+            />
 
             {/* MCQ Questions */}
             {mcqQuestions.length > 0 && (
