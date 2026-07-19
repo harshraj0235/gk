@@ -340,6 +340,7 @@ h3 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 600; }
   .navbar-nav { display: none; }
   .menu-toggle { display: flex; }
   .navbar-search { max-width: 200px; }
+  .mobile-menu { display: block; }
 }
 
 @media (max-width: 600px) {
