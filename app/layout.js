@@ -148,7 +148,7 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="logo" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
                 <span style={{ 
                   background: 'var(--primary)', 
                   color: 'white', 
@@ -164,8 +164,8 @@ function Footer() {
                 <span style={{ background: 'var(--grad-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: '900', fontSize: '1.4rem', letterSpacing: '-0.5px' }}>
                   GK Hindi Pro
                 </span>
-              </div>
-              <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginLeft: '40px', marginTop: '-2px', fontWeight: '500', letterSpacing: '0.5px' }}>by moneycal</span>
+              </a>
+              <a href="https://moneycal.in/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginLeft: '40px', marginTop: '-2px', fontWeight: '500', letterSpacing: '0.5px', textDecoration: 'none' }}>by moneycal</a>
             </div>
             <p style={{ marginTop: '16px' }}>
               यह वेबसाइट सामान्य ज्ञान को बढ़ाने का एक प्रयास है। यहाँ SSC, UPSC, Banking, Railway, CTET और अन्य सभी प्रतियोगी परीक्षाओं के लिए 20,000+ प्रश्न उपलब्ध हैं।

@@ -52,8 +52,8 @@ export default function Header() {
         <div className="container">
           <div className="navbar-inner">
             {/* Logo */}
-            <a href="/" className="navbar-logo" aria-label="GK Hindi Pro Home" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div className="navbar-logo" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0' }}>
+              <a href="/" aria-label="GK Hindi Pro Home" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
                 <div className="logo-icon" style={{ 
                   background: 'var(--primary)', 
                   color: 'white', 
@@ -69,9 +69,9 @@ export default function Header() {
                   📚
                 </div>
                 <span style={{ fontWeight: '900', fontSize: '1.4rem', color: 'var(--primary)', letterSpacing: '-0.5px' }}>GK Hindi Pro</span>
-              </div>
-              <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginLeft: '40px', marginTop: '-2px', fontWeight: '500', letterSpacing: '0.5px' }}>by moneycal</span>
-            </a>
+              </a>
+              <a href="https://moneycal.in/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginLeft: '40px', marginTop: '-2px', fontWeight: '500', letterSpacing: '0.5px', textDecoration: 'none', transition: 'var(--transition)' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--primary)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-muted)'}>by moneycal</a>
+            </div>
 
             {/* Search */}
             <form className="navbar-search" action="/search" method="GET" role="search">
